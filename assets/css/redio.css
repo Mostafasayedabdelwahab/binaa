@@ -1,0 +1,68 @@
+    /* الحاوية */
+    .radio-container {
+        display: flex;
+        margin-bottom: 20px
+    }
+
+    /* عنصر الراديو */
+    .radio-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        position: relative;
+        padding: 10px 15px;
+    }
+
+    /* إخفاء المدخل الافتراضي */
+    .radio-item input[type="radio"] {
+        display: none;
+    }
+
+    /* الزر الدائري */
+    .radio-button {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #ccc;
+        border-radius: 50%;
+        position: relative;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: white;
+    }
+
+    /* النقطة الداخلية عند التحديد */
+    .radio-button::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #8854d0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: all 0.3s ease;
+    }
+
+    /* التأثير عند التحديد */
+    .radio-item input[type="radio"]:checked + .radio-button {
+        border-color: #8854d0;
+        background-color: #EAF4FF;
+        box-shadow: 0 4px 8px #c6bedb;
+    }
+
+    .radio-item input[type="radio"]:checked + .radio-button::after {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* النص بجانب الزر */
+    .radio-label {
+        font-size: 16px;
+        user-select: none;
+        transition: color 0.3s ease;
+    }
+
+    .radio-item:hover .radio-label {
+        color: #8854d0;
+    }
