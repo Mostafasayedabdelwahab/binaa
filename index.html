@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="shortcut icon" href="assets/img/logo.PNG" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/style-v2.2.css"> -->
     <link rel="stylesheet" href="assets/css/site-2.9.css">
 
 
@@ -52,69 +53,76 @@
         </a>
     </div>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="home_nav">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="assets/img/green-logo.png" alt=""></a>
-            <button class="navbar-toggler" type="button">
-
-                <span class="navbar-toggler-icon"></span>
-                <i style="display: none" class="fal fa-times"></i>
-
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+    <nav>
+        <div class=" nav-center" id="home_nav">
+            <div class="nav-header">
+                <a class="navbar-brand" href="#"><img class="logo" src="assets/img/green-logo.png" alt=""></a>
+    
+                <label for="burger" class="burger">
+                    <input id="burger" type="checkbox">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <div>
+    
+            </div>
+            <ul class="links">
+    
+                <li class="nav-item my_mt my-nav-link" >
+                    <a class=" " aria-current="page" href="/">الرئيسية</a>
+                </li>
+                <li class="nav-item dropdown my-nav-link">
+                    <a class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        من نحن
+                    </a>
+                    <ul class="dropdown-menu">
+                        <a class="dropdown-item" href="about.html">من نحن</a>
+                        <a class="dropdown-item" href="https://binaa-ksa.com/our-values">قيمنا</a>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown my-nav-link">
+                    <a class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        المركز الاعلامي
+                    </a>
+                    <ul class="dropdown-menu">
+                        <a class="dropdown-item" href="#"> الاخبار </a>
+                        <a class="dropdown-item" href="https://binaa-ksa.com/video-library">مكتبـــــة الفديــو</a>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown my-nav-link">
+                    <a class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        الخدمات
+                    </a>
+                    <ul class="dropdown-menu fix_drop">
+                        <a class="dropdown-item" href="https://binaa-ksa.com/register">تقديم المشروع</a>
+                        <a class="dropdown-item" href="https://binaa-ksa.com/register">المناقصات</a>
+                    </ul>
+                </li>
+                <li class="nav-item  my-nav-link">
+                    <a class="" href="https://binaa-ksa.com/contact-us">تواصل معنا</a>
+                </li>
+    
+                <div class="nav-button">
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="/">الرئيسية</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            من نحن
-                        </a>
-                        <ul class="dropdown-menu">
-                            <a class="dropdown-item" href="https://binaa-ksa.com/about-us">من نحن</a>
-                            <a class="dropdown-item" href="https://binaa-ksa.com/our-values">قيمنا</a>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            المركز الاعلامي
-                        </a>
-                        <ul class="dropdown-menu">
-                            <a class="dropdown-item" href="#"> الاخبار </a>
-                            <a class="dropdown-item" href="https://binaa-ksa.com/video-library">مكتبـــــة الفديــو</a>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            الخدمات
-                        </a>
-                        <ul class="dropdown-menu">
-                            <a class="dropdown-item" href="https://binaa-ksa.com/register">تقديم المشروع</a>
-                            <a class="dropdown-item" href="https://binaa-ksa.com/register">المناقصات</a>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://binaa-ksa.com/contact-us">تواصل معنا</a>
-                    </li>
-                </ul>
-
-                <ul class="me-auto navbar-icon" style="display: flex; color:#000">
-                    <li class="nav-item">
-                        <a class="nav-link btn-main-color" style="color:#fff" href="https://binaa-ksa.com/login">تسجيل
+                        <a class=" btn-login" href="https://binaa-ksa.com/login">تسجيل
                             الدخول</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn-secondary-color" style="color:#fff"
-                            href="https://binaa-ksa.com/register">انشاء حساب</a>
+                        <a class=" btn-register" href="https://binaa-ksa.com/register">انشاء
+                            حساب</a>
                     </li>
-                </ul>
-
-            </div>
+                </div>
+            </ul>
         </div>
     </nav>
+
+
+
 
 
     <video autoplay muted loop playsinline id="myVideo">
