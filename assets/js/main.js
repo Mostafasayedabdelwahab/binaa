@@ -1,6 +1,14 @@
+
+const burger = document.getElementById("burger");
+const links = document.querySelector(".links");
+
+burger.addEventListener("change", function () {
+  links.classList.toggle("show-links");
+});
+
 window.addEventListener("scroll", function () {
   var nav = document.getElementById("home_nav");
-  let nav_links = document.querySelectorAll(".nav-link");
+  let nav_links = document.querySelectorAll(".my-nav-link a");
   if (window.scrollY > 50) {
     nav.classList.add("scrolled");
     nav.classList.remove("transparent");
@@ -30,7 +38,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.3 }
+  { threshold: 0.2 }
 );
 
 sections.forEach((section) => {
