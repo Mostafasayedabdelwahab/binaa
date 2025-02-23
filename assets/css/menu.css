@@ -1,0 +1,271 @@
+
+@font-face {
+    font-family: "IcoFont";
+    src: url("../font/18\ Khebrat\ Musamim\ Bold.ttf");
+}
+
+
+
+
+.menuBar { display: none }
+.menuRight { display: none }
+.buttonBar  { display: none }
+.navbar  { display: block }
+.menuTitle { display: none }
+
+@media (max-width: 767.98px) {
+
+
+.navbar  { display: none }
+.menuBar { display: block }
+.menuRight { display: block }
+.buttonBar  { display: block }
+.menuTitle { display: block }
+
+
+
+.menuRight img  {
+    width: 105px;
+    display: table;
+    margin: auto;
+    padding: 14px 0px;
+}
+
+
+.menuBar {
+    background: #2d69f0;
+    color: #fff;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    padding: 17px 14px 13px 14px;
+    font-family: "IcoFont";
+}
+
+.menuTitle {
+    position: fixed;
+    z-index: 1000;
+    color: #fff;
+    right: 82px;
+    top: 18px;
+    font-size: 19px;
+}
+
+.menuBar .fa-search {
+    font-size: 25px;
+    float: left;
+}
+
+.menuToggle {
+    position: relative;
+    top: 9px;
+    right: 6px;
+}
+
+.menuToggle span {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+.menuToggle span:nth-child(1) {
+    transform: translateY(-13px);
+    width: 25px;
+}
+
+.menuToggle span:nth-child(2) {
+    transform: translateY(13px);
+    width: 15px;
+}
+
+.menuToggle.activeMenu span:nth-child(1) {
+    transform: translateY(0px) rotate(45deg);
+    width: 40px;
+    transition-delay: 0.30s;
+}
+
+.menuToggle.activeMenu span:nth-child(2) {
+    transform: translateY(0px) rotate(135deg);
+    width: 40px;
+    transition-delay: 0.30s;
+}
+
+.menuToggle.activeMenu span:nth-child(3) {
+    transform: translateX(160px);
+}
+
+
+/*******************************************/
+.navgation-button {
+position: relative;
+width: 100%;
+height: 70px;
+background-color: azure;
+display: flex;
+justify-content: center;
+border-radius: 10px;
+}
+
+.navgation-button ul {
+display: flex;
+}
+
+.navgation-button ul li {
+position: relative;
+list-style: none;
+width: 70px;
+height: 70px;
+z-index: 1;
+}
+
+.navgation-button ul li a {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+z-index: 1;
+}
+
+.navgation-button ul li a .icon {
+position: relative;
+display: block;
+transition: all 1s;
+}
+
+.navgation-button ul li:hover a .icon {
+transform: translateY(-10px);
+}
+
+.navgation-button ul li a .text {
+line-height: 40px;
+display: block;
+opacity: 0;
+}
+
+.navgation-button ul li:hover .icon {
+background: #1863ff;
+width: 70px;
+height: 70px;
+text-align: center;
+color: #fff;
+text-decoration: none;
+line-height: 59px;
+position: absolute;
+top: -82px;
+border-radius: 89px;
+}
+
+.navgation-button ul li:hover .text {
+opacity: 1;
+}
+
+
+
+
+
+.activeMenuRight { display: block;}
+
+
+
+.menuRight {
+    position: fixed;
+    top: 48px;
+    right: 0px;
+    background: #fff;
+    padding: 18px;
+    width: 200px;
+    z-index: 100;
+    height: 100vh;
+    box-shadow: 0px 0px 32px 26px rgb(3 24 128 / 20%);
+    display: none;
+}
+
+
+.menuRight a {
+    display: block;
+    padding: 10px;
+    color: #000;
+}
+
+
+.menuRight a i {
+    padding-left: 11px;
+}
+
+
+
+
+
+
+
+
+.buttonBar {
+    position: fixed;
+    bottom: 0px;
+    background: #fff;
+    padding: 10px 0px;
+    width: 100%;
+    text-align: center;
+    font-family: "IcoFont";
+    z-index: 9999;
+    box-shadow: 0px -4px 20px 0px rgb(3 24 128 / 20%)
+}
+
+.buttonBar i, .buttonBar span  {
+    display: block;
+}
+
+
+.buttonBar i {
+    display: block;
+    font-size: 23px;
+    margin-bottom: 7px;
+    font-weight: 500;
+}
+
+.buttonBar a  {
+    display: inline-block;
+    width: 19%;
+    text-align: center;
+    color: #000;
+    font-family: "IcoFont";
+
+}
+
+
+.buttonBar .active  {
+    margin-bottom: 10px;
+    color: #2d69f0;
+    background: #fff;
+    padding: 20px;
+    position: fixed;
+    bottom: 15px;
+    margin-right: 4px;
+    border-radius: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.register .box { box-shadow: none;  }
+.box-chat { height: 570px; }
+.box-chat { height: 550px; margin: 40px 0px; }
+.box-chat-control { margin-top: -87px; }
+}
+
+
+
+
+

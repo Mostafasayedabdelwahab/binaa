@@ -1,0 +1,706 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    background-size: cover;
+    background: #ecfdf336;
+    font-family: "Tajawal", serif;
+    padding-top: 34px;
+}
+
+.overlay-container {
+    padding-top: 100px;
+}
+
+button, .btn {
+    outline: none;
+}
+
+.FlexBox {
+    display: flex
+}
+
+.card {
+    border-radius: 23px;
+    background: #ffffffa6;
+    padding: 29px;
+    margin-bottom: 30px;
+    border: 1px solid #0000002d;
+}
+
+.card i {
+    color: #14573a;
+    font-size: 20px;
+    padding-left: 10px;
+    font-weight: 500;
+}
+
+.navbar {
+    display: block;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 999;
+    padding: 0px 0px;
+    background: none !important;
+}
+
+.navbar .container {
+    border-radius: 68px;
+    background: #fff;
+    margin-top: 16px;
+    border: 1px solid #14573a;
+    box-shadow: 0px 0px 14px 0px #14573a45;
+}
+
+
+.navbar .navbar-brand img {
+    width: 61px;
+}
+
+.navbar .btn {
+    margin: 0px 7px;
+}
+
+.navbar .me-auto {
+    list-style: none;
+    margin: 5px 0px 0px 0px;
+}
+
+.navbar .me-auto a {
+    color: #fff;
+    padding: 6px 16px;
+    font-weight: bold;
+
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.navbar .navbar-icon i {
+    font-weight: 300;
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #14573a;
+}
+
+.navbar .navbar-icon span {
+    font-size: 13px;
+    color: #000000bd;
+    font-weight: 500;
+}
+
+
+
+
+.btn-main-color {
+    background: #14573a;
+    color: #fff;
+    border-radius: 43px;
+    padding: 10px 30px;
+    border-style: none;
+    font-weight: 600;
+}
+
+.btn-danger-color {
+    background: var(--bs-red);
+    color: #fff;
+    border-radius: 43px;
+    padding: 10px 30px;
+    border-style: none;
+    font-weight: 600;
+}
+
+.main-color {
+    color: #14573a;
+}
+
+.secondary-color {
+   color: #c6bedb;
+}
+
+
+.btn-secondary-color {
+    background: #ecfdf3 !important;
+    color: #14573a !important;
+    border-radius: 43px;
+    padding: 8px 19px;
+    border: none;
+    font-weight: bold;
+}
+
+
+a {
+    font-weight: bold;
+    color: #14573a;
+    text-decoration: none;
+}
+
+
+
+
+.document_id {
+    font-size: 58px;
+    color: #14573a66;
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+.register h2 {
+    padding: 20px 0px;
+}
+
+.login hr, .title hr {
+    width: 100px;
+    display: table;
+    margin: 23px auto;
+    color: #14573a;
+    opacity: 1;
+}
+
+
+.register .overlay {
+    background: #00000094;
+    padding: 100px;
+}
+
+
+.register .buttons {
+    margin: auto;
+    display: table;
+    border-radius: 100px;
+    padding: 5px;
+    text-align: center;
+    background: #ecfdf3;
+}
+
+.register .buttons button {
+    background: none;
+    padding: 9px 12px;
+    border-style: none;
+    cursor: pointer;
+    margin: 0px 5px 0px 5px;
+    text-align: center;
+    font-weight: bold;
+}
+.register  .button-submit {
+    display: table;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+.register  input, .register  select, .register  textarea {
+    display: block;
+    width: 100%;
+    border-style: none !important;
+    /* background: #ecfdf3; */
+    border: 1px solid #0000002d !important;
+    margin-bottom: 30px;
+    border-radius: 13px;
+    outline: none;
+    padding: 12px 20px;
+}
+
+.register label {
+    font-weight: 500;
+    padding: 10px 0px;
+}
+
+.register  .form-action {
+    display: none;
+}
+
+.btn-active {
+    /* background: #56B7795E !important; */
+    border-radius: 37px;
+    background: #14573a !important;
+    color: #fff;
+}
+
+
+
+
+/* .table {
+    background: #ffffff54;
+    font-weight: bold;
+} */
+
+.table td, .table th, .table a {
+    /* color: #fff; */
+}
+
+
+
+
+
+.search-box {
+    background: #00000085;
+    padding: 50px;
+    width: 800px;
+    height: 500px;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+}
+
+.search-box input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+
+
+
+
+.preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+.preview-container div {
+    position: relative;
+    display: inline-block;
+}
+.preview-container img {
+    max-width: 150px;
+    max-height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.preview-container button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.rightMenu {
+    width: 350px;
+    background: #FFFFFF5E;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    margin-top: -26px;
+}
+
+.rightMenu img {
+    width: 130px;
+    margin-bottom: 30px;
+}
+
+.rightMenu  ul {
+    padding: 0px;
+    /* top: 50%; */
+    position: absolute;
+    transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    margin-top: 187px;
+}
+
+.rightMenu  ul li {
+    list-style: none;
+    background: #FFFFFF5E;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.rightMenu  ul li a {
+    color: #000;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.btn-action {
+    background: transparent;
+    border: none;
+    font-size: 17px;
+}
+
+.btn-action i {
+    font-size: 23px;
+    padding: 0px 5px;
+}
+
+
+.upper-menu {
+    background: aliceblue;
+    padding: 5px 18px 5px 10px;
+    font-size: 30px;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    top: 0px;
+}
+
+
+
+
+
+
+
+
+
+.other-datails div {
+    display: inline-block;
+    font-weight: 400;
+    padding: 10px 0px 10px 30px;
+    color: #707070;
+}
+
+.other-datails div i {
+    color: #14573a;
+    font-size: 20px;
+    padding-left: 10px;
+    font-weight: 500;
+}
+
+.description {
+    font-weight: 400;
+}
+
+.progress_rate {
+    font-size: 24px;
+    font-weight: bold;
+    color: #14573a;
+    margin-top: -17px;
+    text-align: left;
+}
+
+.small-card {
+    padding: 21px 10px;
+}
+
+.btn-action i {
+    font-size: 22px;
+}
+
+.btn-action {
+    background: transparent;
+    border: none;
+    text-align: center;
+    color: #14573a
+}
+
+.fa-trash-alt {color: #ff5722}
+.fa-file-chart-line {color: #4CAF50;}
+.fa-redo-alt {color: var(--bs-blue);}
+
+
+.page-development img {
+    width: 330px;
+}
+
+.page-development {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: #14573a;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.rightMenu {
+    width: 300px;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    margin-top: 26px;
+}
+
+.rightMenu a, .rightMenu form {
+    display: block;
+    padding: 13px 30px;
+    margin: 6px;
+    font-weight: 500 !important;
+    color: #000;
+    text-align: right;
+    font-size: 18px;
+}
+.rightMenu button {
+    font-weight: 500;
+}
+.rightMenu a i, .rightMenu form i {
+    font-weight: 400;
+    padding: 0px 10px;
+    font-size: 22px;
+    color: #14573a;
+    width: 46px;
+    text-align: center;
+}
+
+.rightMenu .active {
+    background: #14573a;
+    color: #fff;
+    border-radius: 44px;
+}
+
+.rightMenu hr {
+     margin: 0;
+}
+
+.menu-mobile {
+    background: aliceblue;
+    padding: 6px 10px;
+    font-size: 24px;
+    background: #ecfdf3 !important;
+    color: #14573a !important;
+    margin: 8px 15px 15px 15px;
+    border-radius: 15px;
+    position: fixed;
+    width: 92%;
+    z-index: 9999999;
+    top: 10px;
+}
+
+.menu-mobile .icon-menu {
+    transform: rotate(180deg);
+    margin-right: 8px;
+    font-weight: 400;
+    margin-top: -9px;
+    font-size: 30px;
+}
+
+.fa-xmark {
+    display: none;
+}
+.menu-mobile a {
+    padding: 10px;
+}
+
+
+.fa-trash-alt {
+    color: var(--bs-red) !important;
+}
+
+.fa-pencil-alt {
+    color: var(--bs-primary) !important;
+}
+
+
+
+.menu-mobile {display: none;}
+.large-screen {display: block;}
+.small-screen {display: none; text-align: center;}
+
+
+
+
+
+
+
+
+
+
+/***********************************************/
+/******************* Footer ********************/
+.footer {
+
+    /* background: url(assets/img/health-bannerbg.png); */
+    padding: 52px 0px 24px 0px;
+    margin-top: 100px;
+    /* background-size: cover !important; */
+    color: #14573a;
+    background-color: #ecfdf3;
+}
+
+
+
+.footer p {
+    font-size: 14px;
+}
+
+.footer ul li {
+    list-style: none;
+}
+
+.footer ul li a {
+    font-weight: 400;
+    color: #14573a;
+    text-decoration: none;
+}
+
+.footer ul li a i {
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.footer .FlexBox i {
+    width: 70px;
+    background: #faebd7a6;
+    height: 70px;
+    border-radius: 38px;
+    text-align: center;
+    border: 1px dashed;
+    padding: 19px;
+    font-size: 28px;
+    color: #14573a;
+    margin: 0px 0px 0px 15px;
+}
+
+.footer .FlexBox a {
+    display: block;
+    font-size: 30px;
+    text-decoration: none;
+    color: #14573a;
+    letter-spacing: 1px;
+    font-family: "Lato", serif;
+
+}
+
+.footer .copyright a {
+    display: table;
+    margin: auto;
+    text-decoration: none;
+    color: #14573a;
+    padding: 22px 0px 0px 0px;
+    border-top: 1px solid #CCB;
+    margin-top: 34px;
+    width: 100%;
+    text-align: center;
+}
+
+.footer .media a {
+    padding: 10px;
+    color: #14573a;
+    font-size: 25px;
+}
+/******************* Footer ********************/
+/***********************************************/
+
+
+@media (max-width: 575.98px) {
+    body {padding-top: 70px;}
+    .overlay-container { padding-top: 35px; }
+    .login hr, .title hr { width: 55px; margin: 15px auto; }
+
+    .large-screen {display: none;}
+    .small-screen {display: block;}
+    .register input, .register select, .register textarea { margin-bottom: 5px; }
+
+    .contract, .appointments {text-align: center;}
+    .contract .d-flex, .appointments .d-flex, .projects .d-flex {display: block !important; text-align: center;}
+    .appointments a { margin-top: 21px; display: block; }
+    .contract .other-sacreen br {display: none;}
+    .contract .other-sacreen div {display: inline-block; margin-top: 10px;}
+    .construction_stages .small-screen {margin-top: 25px;}
+    .construction_stages .progress_block {margin-top: 15px;}
+    .other-datails div { padding: 9px 0px 8px 10px; }
+
+    .menu-mobile {display: block; padding: 16px 30px;     width: 96%;}
+    .navbar {display: none;}
+    .rightMenu { position: fixed; z-index: 9999; background: #f6f4fd; width: 227px; display: none;}
+    .rightMenu img { width: 70px; margin-bottom: 13px; }
+    .rightMenu a, .rightMenu form { padding: 7px 9px; font-size: 14px;}
+    .rightMenu a i, .rightMenu form i { font-size: 18px; width: 40px; }
+
+    .register .buttons { background: none }
+    .register .buttons button { background: #ecfdf3; border-radius: 32px; margin: 0px 0px 13px 8px; padding: 9px 19px;}
+
+    .footer  {text-align: center;}
+    .footer .desc {display: none;}
+    .footer .fa-arrow-left-long {display: none;}
+    .footer .FlexBox a { font-size: 20px !important; letter-spacing: 1px; font-weight: 500; text-align: center;}
+    .footer .FlexBox { display: flex; margin-top: 20px; }
+    .footer .center-data {display: table; margin: auto}
+
+}
+
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* .card .d-flex { display: block !important; } */
+    .rightMenu { display: none; }
+    .login hr, .title hr { width: 55px; margin: 15px auto; }
+    .large-screen {display: none;}
+    .small-screen {display: block;}
+    .contract, .appointments {text-align: center;}
+    .contract .d-flex, .appointments .d-flex, .projects .d-flex {display: block !important; text-align: center;}
+    .appointments a { margin-top: 21px; display: block; }
+    .contract .other-sacreen br {display: none;}
+    .contract .other-sacreen div {display: inline-block; margin-top: 10px;}
+    .construction_stages .small-screen {margin-top: 15px;}
+    .construction_stages .progress_block {margin-top: 15px;}
+
+    .menu-mobile {display: block; padding: 16px 30px;     width: 96%;}
+    .navbar {display: none;}
+    .rightMenu { position: fixed; z-index: 9999; background: #f6f4fd; width: 227px; display: none;}
+    .rightMenu img { width: 70px; margin-bottom: 13px; }
+    .rightMenu a, .rightMenu form { padding: 7px 9px; font-size: 14px;}
+    .rightMenu a i, .rightMenu form i { font-size: 18px; width: 40px; }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* .card .d-flex { display: block !important; } */
+    .rightMenu { display: none; }
+    .login hr, .title hr { width: 55px; margin: 15px auto; }
+    .other-datails div { padding: 10px 0px 10px 14px; }
+    .large-screen {display: none;}
+    .small-screen {display: block;}
+    .contract {text-align: center;}
+    .contract .d-flex {display: block !important;}
+    .contract .other-sacreen br {display: none;}
+    .contract .other-sacreen div {display: inline-block; margin-top: 10px;}
+
+    .menu-mobile {display: block; padding: 16px 30px;     width: 96%;}
+    .navbar {display: none;}
+    .rightMenu { position: fixed; z-index: 9999; background: #f6f4fd; width: 227px; display: none;}
+    .rightMenu img { width: 70px; margin-bottom: 13px; }
+    .rightMenu a, .rightMenu form { padding: 7px 9px; font-size: 14px;}
+    .rightMenu a i, .rightMenu form i { font-size: 18px; width: 40px; }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* .card .d-flex { display: block !important; } */
+    .rightMenu { display: none; }
+    .login hr, .title hr { width: 55px; margin: 15px auto; }
+    .other-datails div { padding: 10px 0px 10px 14px; }
+
+    .menu-mobile {display: block; padding: 16px 30px;     width: 96%;}
+    .navbar {display: none;}
+    .rightMenu { position: fixed; z-index: 9999; background: #f6f4fd; width: 227px; display: none; }
+    .rightMenu img { width: 70px; margin-bottom: 13px; }
+    .rightMenu a, .rightMenu form { padding: 7px 9px; font-size: 14px;}
+    .rightMenu a i, .rightMenu form i { font-size: 18px; width: 40px; }
+}
+
+ol, ul {
+    padding-left: 0rem;
+}
