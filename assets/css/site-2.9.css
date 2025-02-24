@@ -143,7 +143,7 @@ nav {
 }
 
 .nav-center {
-  z-index: 10000;
+  z-index: 50000;
   position: fixed;
   font-weight: bold;
   box-shadow: 0 5px 15px #0000001a;
