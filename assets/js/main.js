@@ -1,45 +1,75 @@
 
 /////////////////// loading ///////////////
 document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll("a"); // تحديد جميع الروابط في الصفحة
-  links.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      if (
-        (!link.target || link.target === "_self") &&
-        !link.href.includes("#")
-      ) {
-        e.preventDefault(); // منع التنقل الفوري
-        const loading = document.getElementById("loading");
-        if (loading) loading.classList.remove("hidden"); // إظهار اللودينج إذا كان موجودًا
-        setTimeout(() => {
-          window.location.href = link.href; // تحميل الصفحة الجديدة
-        }, 100); // يمكنك تعديل وقت الانتظار
-      }
-    });
-  });
-});
-
-// جعل اللودينج يبقى على الأقل 1 ثانية بعد تحميل الصفحة
-window.addEventListener("load", function () {
   const loading = document.getElementById("loading");
-  if (loading) {
-    setTimeout(() => {
+  const elements = document.querySelectorAll("header, nav, section, div"); 
+
+  let visibleCount = 0;
+  let observerTimeout;
+
+  if (loading && elements.length > 0) {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visibleCount++;
+          }
+        });
+
+        if (visibleCount >= 3) {
+          // إذا تم تحميل أول ٣ عناصر
+          clearTimeout(observerTimeout); // إلغاء المؤقت إذا تحقق الشرط
+          setTimeout(() => {
+            loading.classList.add("hidden"); // إخفاء اللودر
+            observer.disconnect(); // إيقاف المراقبة
+          }, 1000); // اجعلها أسرع بمجرد ظهور المحتوى
+        }
+      },
+      { root: null, threshold: 0.1 }
+    );
+
+    elements.forEach((element) => observer.observe(element));
+
+    // إذا لم يتم تحميل العناصر خلال ١٥٠٠ مللي ثانية، أخفِ اللودر تلقائيًا
+    observerTimeout = setTimeout(() => {
       loading.classList.add("hidden");
-    }, 1500); // إجبار اللودينج على البقاء 1 ثانية على الأقل
+      observer.disconnect();
+    }, 1000);
   }
 });
 
-// إظهار اللودينج عند الرجوع للخلف إذا كان موجودًا
-window.addEventListener("popstate", function () {
-    const loading = document.getElementById("loading");
-    if (loading) {
-        loading.classList.remove("hidden");
+// عند التنقل بين الصفحات
+document.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    if (
+      link.target === "_self" || // السماح بالروابط التي تفتح في نفس الصفحة
+      link.href.includes("#") // السماح بالروابط الداخلية
+    ) {
+      return;
+    }
 
-        setTimeout(() => {
-            loading.classList.add("hidden"); // إجبار اللودر على الاختفاء بعد 500 مللي ثانية
-        }, 500);
-    }
+    e.preventDefault();
+    const loading = document.getElementById("loading");
+    if (loading) loading.classList.remove("hidden");
+
+    setTimeout(() => {
+      window.location.href = link.href;
+    }, 100);
+  });
 });
+
+// عند الرجوع للخلف
+window.addEventListener("popstate", function () {
+  const loading = document.getElementById("loading");
+  if (loading) {
+    loading.classList.remove("hidden");
+
+    setTimeout(() => {
+      loading.classList.add("hidden");
+    }, 1000);
+  }
+});
+
 /////////////////// loading ///////////////
 
 
