@@ -482,11 +482,17 @@ ul.dropdown-menu a:hover {
 .progress-bar-video .swiper-button-prev:after,
 .progress-bar-video .swiper-rtl .swiper-button-next:after {
   content: "\2190";
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .progress-bar-video .swiper-button-next:after,
 .progress-bar-video .swiper-rtl .swiper-button-prev:after {
   content: "\2192";
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /******************* swiper video ******************/
