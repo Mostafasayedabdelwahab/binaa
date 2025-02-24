@@ -414,12 +414,6 @@ ul.dropdown-menu a:hover {
 
 .swiper-container-video .swiper-slide {
   cursor: pointer;
-  opacity: 0.6;
-  transition: opacity 0.3s;
-}
-
-.swiper-container-video .swiper-slide:hover {
-  opacity: 1;
 }
 
 .swiper-container-video .swiper-slide img {
