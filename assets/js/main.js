@@ -2,7 +2,7 @@
 /////////////////// loading ///////////////
 document.addEventListener("DOMContentLoaded", function () {
   const loading = document.getElementById("loading");
-  const elements = document.querySelectorAll("header, nav, section, div"); 
+  const elements = document.querySelectorAll("header, nav, section, div");
 
   let visibleCount = 0;
   let observerTimeout;
@@ -59,9 +59,11 @@ document.querySelectorAll("a").forEach((link) => {
 });
 
 // عند الرجوع للخلف
-window.addEventListener("popstate", function () {
+window.addEventListener("pageshow", function (event) {
   const loading = document.getElementById("loading");
-  if (loading) {
+
+  // event.persisted تعني أن الصفحة تم تحميلها من الكاش عند الرجوع للخلف
+  if (loading && event.persisted) {
     loading.classList.remove("hidden");
 
     setTimeout(() => {
