@@ -31,15 +31,15 @@ window.addEventListener("load", function () {
 
 // إظهار اللودينج عند الرجوع للخلف إذا كان موجودًا
 window.addEventListener("popstate", function () {
-  const loading = document.getElementById("loading");
-  if (loading) {
-    loading.classList.remove("hidden");
-    setTimeout(() => {
-      loading.classList.add("hidden");
-    }, 500);
-  }
-});
+    const loading = document.getElementById("loading");
+    if (loading) {
+        loading.classList.remove("hidden");
 
+        setTimeout(() => {
+            loading.classList.add("hidden"); // إجبار اللودر على الاختفاء بعد 500 مللي ثانية
+        }, 500);
+    }
+});
 /////////////////// loading ///////////////
 
 
