@@ -97,6 +97,157 @@ section.show_section p {
   }
 }
 
+
+/*********************************************/
+/******************* loading ******************/
+
+
+#loading {
+   position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #002723;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999999999;
+    transition: opacity 0.5s ease-out, visibility 0.5s;
+    text-align: center;
+    gap: 20%;
+}
+
+#loading.hidden{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-out, visibility 0.5s;
+}
+
+#loading #container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#loading #ring {
+  width: 300px;
+  height: 300px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#loading #ring:nth-child(1) {
+  border-bottom: 8px solid #a6f1c5;
+  animation: rotate1 2s linear infinite;
+}
+
+@keyframes rotate1 {
+  from {
+    transform: rotateX(50deg) rotateZ(110deg);
+  }
+
+  to {
+    transform: rotateX(50deg) rotateZ(470deg);
+  }
+}
+
+#loading #ring:nth-child(2) {
+  border-bottom: 8px solid #a6f1c5;
+  animation: rotate2 2s linear infinite;
+}
+
+@keyframes rotate2 {
+  from {
+    transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+  }
+
+  to {
+    transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+  }
+}
+
+#loading #ring:nth-child(3) {
+  border-bottom: 8px solid #a6f1c5;
+  animation: rotate3 2s linear infinite;
+}
+
+@keyframes rotate3 {
+  from {
+    transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+  }
+
+  to {
+    transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+  }
+}
+
+#loading #ring:nth-child(4) {
+  border-bottom: 8px solid #a6f1c5;
+  animation: rotate4 2s linear infinite;
+}
+
+@keyframes rotate4 {
+  from {
+    transform: rotateX(70deg) rotateZ(270deg);
+  }
+
+  to {
+    transform: rotateX(70deg) rotateZ(630deg);
+  }
+}
+
+
+
+.scanner span {
+  direction: ltr;
+  color: transparent;
+  font-size: 1.65rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.scanner span::before {
+  content: "Loading...";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-right: 4px solid #a6f1c5;
+  overflow: hidden;
+  color: #a6f1c5;
+  animation: load91371 2s linear infinite;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+@keyframes load91371 {
+  0%, 10%, 100% {
+    width: 0;
+  }
+
+  10%,20%,30%,40%,50%,60%,70%,80%,90%,100% {
+    border-right-color: transparent;
+  }
+
+  11%,21%,31%,41%,51%,61%,71%,81%,91% {
+    border-right-color: #a6f1c5;
+  }
+
+  60%, 80% {
+    width: 100%;
+  }
+}
+
+
+/*********************************************/
+/******************* loading ******************/
+
+
+
+
 /*********************************************/
 /******************* Navbar ******************/
 
@@ -476,16 +627,16 @@ ul.dropdown-menu a:hover {
 .progress-bar-video .swiper-rtl .swiper-button-next:after {
   content: "\2190";
   position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .progress-bar-video .swiper-button-next:after,
 .progress-bar-video .swiper-rtl .swiper-button-prev:after {
   content: "\2192";
   position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /******************* swiper video ******************/
@@ -1634,3 +1785,4 @@ textarea {
     transform: scale(1, 1);
   }
 }
+
