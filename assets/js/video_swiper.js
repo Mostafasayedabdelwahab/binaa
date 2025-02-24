@@ -51,7 +51,7 @@ function toggleProgressBar() {
   let progressBar = document.getElementById("progress-bar");
   let totalSlides = swiper.slides.length;
 
-  if (totalSlides <= swiper.params.slidesPerView) {
+  if (totalSlides <= swiper.params.slidesPerView ) {
     progressBar.style.display = "none"; // إخفاء الشريط
   } else {
     progressBar.style.display = "block"; // إظهاره عند وجود أكثر من 3 فيديوهات
