@@ -218,7 +218,7 @@ section.show_section p {
   border-right: 4px solid #a6f1c5;
   overflow: hidden;
   color: #a6f1c5;
-  animation: load91371 2s linear infinite;
+  animation: load91371 1.5s linear infinite;
   font-weight: bold;
   font-size: 1.5rem;
 }
