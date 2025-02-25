@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
 
-        if (visibleCount >= 3) {
-          // إذا تم تحميل أول ٣ عناصر
+        if (visibleCount >= 4) {
+          // إذا تم تحميل أول 4 عناصر
           clearTimeout(observerTimeout); // إلغاء المؤقت إذا تحقق الشرط
           setTimeout(() => {
             loading.classList.add("hidden"); // إخفاء اللودر
