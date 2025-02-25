@@ -47,6 +47,12 @@ document.querySelectorAll("a").forEach((link) => {
     ) {
       return;
     }
+      // التحقق مما إذا كان الرابط خارجيًا
+        const isExternal = !link.href.startsWith(window.location.origin);
+        if (isExternal) {
+            return; // إذا كان الرابط خارجيًا، لا تفعل اللودر
+        }
+
 
     e.preventDefault();
     const loading = document.getElementById("loading");
