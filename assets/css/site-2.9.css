@@ -97,30 +97,32 @@ section.show_section p {
   }
 }
 
+#myVideo {
+  width: 100%;
+}
 
 /*********************************************/
 /******************* loading ******************/
 
-
 #loading {
-   position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: #002723;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    z-index: 9999999999;
-    transition: opacity 0.5s ease-out, visibility 0.5s;
-    text-align: center;
-    gap: 20%;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #002723;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999999999;
+  transition: opacity 0.5s ease-out, visibility 0.5s;
+  text-align: center;
+  gap: 20%;
 }
 
-#loading.hidden{
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease-out, visibility 0.5s;
+#loading.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0.5s;
 }
 
 #loading #container {
@@ -198,8 +200,6 @@ section.show_section p {
   }
 }
 
-
-
 .scanner span {
   direction: ltr;
   color: transparent;
@@ -224,29 +224,45 @@ section.show_section p {
 }
 
 @keyframes load91371 {
-  0%, 10%, 100% {
+  0%,
+  10%,
+  100% {
     width: 0;
   }
 
-  10%,20%,30%,40%,50%,60%,70%,80%,90%,100% {
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90%,
+  100% {
     border-right-color: transparent;
   }
 
-  11%,21%,31%,41%,51%,61%,71%,81%,91% {
+  11%,
+  21%,
+  31%,
+  41%,
+  51%,
+  61%,
+  71%,
+  81%,
+  91% {
     border-right-color: #a6f1c5;
   }
 
-  60%, 80% {
+  60%,
+  80% {
     width: 100%;
   }
 }
 
-
 /*********************************************/
 /******************* loading ******************/
-
-
-
 
 /*********************************************/
 /******************* Navbar ******************/
@@ -642,10 +658,234 @@ ul.dropdown-menu a:hover {
 /******************* swiper video ******************/
 /*********************************************/
 
-#myVideo {
-  /* height: 100vh; */
+/******************* login ******************/
+/*********************************************/
+
+.login hr,
+.title hr {
+  width: 100px;
+  display: table;
+  margin: 23px auto;
+  color: #14573a;
+  opacity: 1;
+}
+
+.register .overlay {
+  background: #00000094;
+  padding: 100px;
+}
+
+.register .buttons {
+  margin: auto;
+  display: table;
+  border-radius: 100px;
+  padding: 5px;
+  text-align: center;
+  background: #ecfdf3;
+}
+
+.register .buttons button {
+  background: none;
+  padding: 9px 12px;
+  border-style: none;
+  cursor: pointer;
+  margin: 0px 5px 0px 5px;
+  text-align: center;
+  font-weight: bold;
+}
+.register .button-submit {
+  display: table;
+  margin: auto;
+  margin-top: 10px;
+}
+.register label {
+  font-weight: 500;
+  padding: 10px 0px;
+}
+
+.register .form-action {
+  display: none;
+}
+
+.login_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 80%;
+  margin: auto;
+}
+.card {
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  background: #fff;
+  border: 1px solid #0000002d;
+  transition: 0.5s;
+}
+.login_page .card:hover {
+  scale: 1.01;
+  box-shadow: 0px 5px 40px 10px #0c0d0c75;
+}
+
+.login_page .buttons {
+  margin: auto;
+  display: table;
+  border-radius: 10px;
+  padding: 22px;
+  text-align: center;
+  background: #ecfdf3;
+  flex-wrap: wrap;
+}
+.login_page .buttons button {
+  min-width: 150px;
+}
+
+.btn-active {
+  border-radius: 37px;
+  background: #14573a !important;
+  color: #fff;
+}
+
+.login_page button {
+  border: none;
+}
+
+.login_page form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login_page .secondary-color {
+  color: #14573a;
+  font-size: 18px;
+}
+
+.login_bg {
+  background-image: url("../img/bg.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+}
+
+.over_lay_login {
+  background: #00000094;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.login_page .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #14573a;
+  background: transparent;
   width: 100%;
 }
+
+.login_page .input:focus {
+  outline: none;
+}
+
+.login_page label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  right: 5px;
+  top: 5px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.login_page .input:focus ~ label,
+.login_page .input:valid ~ label,
+.login_page input:not(:placeholder-shown) ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #14573a;
+}
+
+.login_page .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.login_page .bar:before,
+.login_page .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #14573a;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.login_page .bar:before {
+  left: 50%;
+}
+
+.login_page .bar:after {
+  right: 50%;
+}
+
+.login_page .input:focus ~ .bar:before,
+.login_page .input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.login_page .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.login_page .input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+
+@media (max-width: 530px) {
+  .login_page h3 {
+    margin-bottom: 0rem;
+  }
+  .login_page hr {
+    margin: 10px auto;
+  }
+  .login_page .buttons {
+    padding: 0px 22px;
+  }
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #14573a;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+/******************* login******************/
+/*********************************************/
 
 .header-logo {
   position: absolute;
@@ -663,18 +903,6 @@ ul.dropdown-menu a:hover {
   width: 200px;
   display: block;
   margin: auto;
-}
-
-.card {
-  padding: 40px;
-  border-radius: 20px;
-  margin-bottom: 30px;
-  background: #ffffffa6;
-  border: 1px solid #0000002d;
-  transition: 0.5s;
-}
-.card:hover {
-  scale: 1.03;
 }
 
 .real-estate-developer a {
@@ -1785,4 +2013,3 @@ textarea {
     transform: scale(1, 1);
   }
 }
-
