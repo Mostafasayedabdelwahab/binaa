@@ -75,11 +75,35 @@ section.show_section p {
 
 .btn-main-color {
   background: #14573a;
-  color: #fff !important;
-  font-weight: 500;
+  color: #ecfdf3 !important;
+  font-weight: 600;
   padding: 10px 23px !important;
   border-radius: 55px;
   text-decoration: none;
+  transition: 0.5s;
+}
+
+.btn-secondary-color {
+  padding: 11px 33px !important;
+  background: #ecfdf3 !important;
+  color: #14573a !important;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 39px;
+  transition: 0.5s;
+}
+
+.btn-main-color:hover,
+.btn-login:hover {
+  background: #ecfdf3 !important;
+  color: #14573a !important;
+}
+
+
+.btn-secondary-color:hover,
+.btn-register:hover {
+    color: rgb(255, 255, 255) !important;
+    background: rgb(20, 87, 58) !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -1041,14 +1065,7 @@ ul.dropdown-menu a:hover {
   display: none !important;
 }
 
-.btn-secondary-color {
-  padding: 11px 33px !important;
-  background: #ecfdf3 !important;
-  color: #14573a !important;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 39px;
-}
+
 
 .real-estate-developer a i {
   /* transform: rotate(268deg); */
