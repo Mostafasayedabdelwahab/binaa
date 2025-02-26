@@ -293,7 +293,7 @@ nav {
 }
 
 .links a {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   display: block;
   padding: 0.5rem;
   transition: 0.5s;
@@ -440,6 +440,9 @@ nav {
     align-items: center;
     margin: 0;
   }
+  .nav-button {
+    margin-right: 70px;
+  }
 }
 
 @media screen and (max-width: 1110px) {
@@ -448,9 +451,6 @@ nav {
   }
   .my_mt {
     margin-top: 20px;
-  }
-  .fix_drop {
-    inset: 100px auto auto auto !important;
   }
 }
 @media screen and (max-width: 768px) {
@@ -763,22 +763,23 @@ ul.dropdown-menu a:hover {
 }
 
 .login_bg {
-  background-image: url("../img/bg.png");
+  /* background-image: url("../img/bg.png");
   background-size: cover;
-  background-position: center;
+  background-position: center; */
   width: 100%;
   height: 100vh;
   position: absolute;
   z-index: -2;
+  background-color: #002521d4;
 }
 
-.over_lay_login {
+/* .over_lay_login {
   background: #00000094;
   width: 100%;
   height: 100vh;
   position: absolute;
   z-index: -1;
-}
+} */
 
 .login_page .input {
   font-size: 16px;
