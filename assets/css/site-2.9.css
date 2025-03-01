@@ -99,11 +99,10 @@ section.show_section p {
   color: #14573a !important;
 }
 
-
 .btn-secondary-color:hover,
 .btn-register:hover {
-    color: rgb(255, 255, 255) !important;
-    background: rgb(20, 87, 58) !important;
+  color: rgb(255, 255, 255) !important;
+  background: rgb(20, 87, 58) !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -682,8 +681,18 @@ ul.dropdown-menu a:hover {
 /******************* swiper video ******************/
 /*********************************************/
 
-/******************* login ******************/
-/*********************************************/
+.card {
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  background: #fff;
+  border: 1px solid #0000002d;
+  transition: 0.5s;
+}
+.card:hover {
+  scale: 1.01;
+  box-shadow: 0px 3px 20px 0px #14573a4a;
+}
 
 .login hr,
 .title hr {
@@ -717,11 +726,7 @@ ul.dropdown-menu a:hover {
   text-align: center;
   font-weight: bold;
 }
-.register .button-submit {
-  display: table;
-  margin: auto;
-  margin-top: 10px;
-}
+
 .register label {
   font-weight: 500;
   padding: 10px 0px;
@@ -730,6 +735,55 @@ ul.dropdown-menu a:hover {
 .register .form-action {
   display: none;
 }
+.btn-active {
+  border-radius: 37px;
+  background: #14573a !important;
+  color: #fff;
+}
+.register h6.secondary-color {
+  color: #14573a;
+  font-size: 18px;
+}
+
+/******************* register******************/
+/*********************************************/
+.register_page {
+  min-height: 100vh;
+  margin: 100px auto;
+  width: 80%;
+}
+.register_page .buttons {
+  margin: auto;
+  border-radius: 3vw;
+  padding: 22px;
+  text-align: center;
+  background: #ecfdf3;
+}
+.register_page .buttons button {
+  min-width: 150px;
+}
+.fix_select {
+  font-size: 18px !important;
+  font-weight: normal;
+  position: relative;
+  padding: 10px 3px 2px 5px !important;
+  margin-right: -7px;
+  color: #999;
+  border-radius: 0;
+  margin-top: 5px;
+  box-shadow: none !important;
+}
+.register .button-submit {
+  margin: auto;
+  margin-top: 10px;
+  width: 60%;
+}
+
+/******************* register******************/
+/*********************************************/
+
+/******************* login ******************/
+/*********************************************/
 
 .login_page {
   display: flex;
@@ -738,18 +792,6 @@ ul.dropdown-menu a:hover {
   min-height: 100vh;
   width: 80%;
   margin: auto;
-}
-.card {
-  padding: 30px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  background: #fff;
-  border: 1px solid #0000002d;
-  transition: 0.5s;
-}
-.login_page .card:hover {
-  scale: 1.01;
-    box-shadow: 0px 3px 20px 0px #14573a4a;
 }
 
 .login_page .buttons {
@@ -765,12 +807,6 @@ ul.dropdown-menu a:hover {
   min-width: 150px;
 }
 
-.btn-active {
-  border-radius: 37px;
-  background: #14573a !important;
-  color: #fff;
-}
-
 .login_page button {
   border: none;
 }
@@ -781,13 +817,7 @@ ul.dropdown-menu a:hover {
   flex-direction: column;
 }
 
-.login_page .secondary-color {
-  color: #14573a;
-  font-size: 18px;
-}
-
-
-
+.register_page .input,
 .login_page .input {
   font-size: 16px;
   padding: 10px 10px 10px 5px;
@@ -798,10 +828,12 @@ ul.dropdown-menu a:hover {
   width: 100%;
 }
 
+.register_page .input:focus,
 .login_page .input:focus {
   outline: none;
 }
 
+.register_page label,
 .login_page label {
   color: #999;
   font-size: 18px;
@@ -815,6 +847,9 @@ ul.dropdown-menu a:hover {
   -webkit-transition: 0.2s ease all;
 }
 
+.register_page .input:focus ~ label,
+.register_page .input:valid ~ label,
+.register_page input:not(:placeholder-shown) ~ label,
 .login_page .input:focus ~ label,
 .login_page .input:valid ~ label,
 .login_page input:not(:placeholder-shown) ~ label {
@@ -823,12 +858,15 @@ ul.dropdown-menu a:hover {
   color: #14573a;
 }
 
+.register_page .bar,
 .login_page .bar {
   position: relative;
   display: block;
   width: 100%;
 }
 
+.register_page .bar:before,
+.register_page .bar:after,
 .login_page .bar:before,
 .login_page .bar:after {
   content: "";
@@ -842,19 +880,24 @@ ul.dropdown-menu a:hover {
   -webkit-transition: 0.2s ease all;
 }
 
+.register_page .bar:before,
 .login_page .bar:before {
   left: 50%;
 }
 
+.register_page .bar:after,
 .login_page .bar:after {
   right: 50%;
 }
 
+.register_page .input:focus ~ .bar:before,
+.register_page .input:focus ~ .bar:after,
 .login_page .input:focus ~ .bar:before,
 .login_page .input:focus ~ .bar:after {
   width: 50%;
 }
 
+.register_page .highlight,
 .login_page .highlight {
   position: absolute;
   height: 60%;
@@ -865,6 +908,7 @@ ul.dropdown-menu a:hover {
   opacity: 0.5;
 }
 
+.register_page .input:focus ~ .highlight,
 .login_page .input:focus ~ .highlight {
   animation: inputHighlighter 0.3s ease;
 }
@@ -1064,8 +1108,6 @@ ul.dropdown-menu a:hover {
 .owl-nav {
   display: none !important;
 }
-
-
 
 .real-estate-developer a i {
   /* transform: rotate(268deg); */
