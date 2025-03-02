@@ -27,8 +27,8 @@ button,
   transition: 0.5s;
 }
 .card:hover {
-    scale: 1.01;
-    box-shadow: 0px 3px 20px 0px #14573a4a;
+  scale: 1.01;
+  box-shadow: 0px 3px 20px 0px #14573a4a;
 }
 
 .card i {
@@ -399,7 +399,7 @@ a {
   z-index: 9999;
   transform: translateX(-250%);
   transition: 0.5s;
-  min-height: 50vh;
+  min-height: auto;
 }
 
 .notification-item {
@@ -647,7 +647,6 @@ a {
   scale: 1.05;
   background: #14573a;
   color: #ecfdf3;
-  border: 1px solid #ecfdf3;
 }
 
 .rightMenu a:hover i {
@@ -718,12 +717,12 @@ a {
 
 @media (max-width: 768px) {
   .left-content {
-    width: calc(100% - 50px);
+    width: calc(100% - 35px);
   }
 
   .navbar {
-    width: calc(100% - 50px);
-    padding: 5px 0 0 0;
+    width: calc(100% - 35px);
+    padding:0;
   }
 
   .navbar ul {
@@ -731,25 +730,35 @@ a {
   }
 
   .navbar .me-auto a {
-    padding: 6px;
+    padding: 4px 10px
   }
+  .navbar-brand {
+     padding: 0; 
+}
+.notification-item p:nth-of-type(1) {
+    font-size: 14px;
+}
 
   .navbar .navbar-brand img {
-    width: 40px;
+    width: 35px;
   }
 
   .navbar .navbar-icon i {
-    font-size: 18px;
+    font-size: 14px;
+    margin-bottom: 0;
   }
+  .navbar .navbar-icon span {
+    font-size: 10px;
+}
 
   .navbar .prof_img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 
   .rightMenu {
-    width: 50px;
-    min-width: 50px;
+    width: 35px;
+    min-width: 35px;
   }
 
   .title_rightMenu {
@@ -764,6 +773,12 @@ a {
 
   .rightMenu span {
     display: none;
+  }
+  .rightMenu a i,
+  .rightMenu form i {
+    padding: 0px;
+    font-size: 18px;
+    width: 30px;
   }
 
   #rightMenuToggle {
