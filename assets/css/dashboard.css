@@ -19,11 +19,11 @@ button,
 }
 
 .card {
-  border-radius: 23px;
+  border-radius: 10px;
   background: #ffffffa6;
-  padding: 29px;
-  margin-bottom: 30px;
+  padding: 15px;
   border: 1px solid #0000002d;
+  margin-bottom: 20px;
   transition: 0.5s;
 }
 .card:hover {
@@ -45,6 +45,13 @@ button,
   padding: 10px 30px;
   border-style: none;
   font-weight: 600;
+  transition: 0.5s;
+}
+.btn-main-color:hover {
+  background: #ecfdf3;
+  color: #14573a;
+  border: 1px solid #14573a;
+  scale: 1.05;
 }
 
 .btn-danger-color {
@@ -128,13 +135,12 @@ a {
   margin-top: 10px;
 }
 
-.register input,
+/* .register input,
 .register select,
 .register textarea {
   display: block;
   width: 100%;
   border-style: none !important;
-  /* background: #ecfdf3; */
   border: 1px solid #0000002d !important;
   margin-bottom: 30px;
   border-radius: 13px;
@@ -145,7 +151,7 @@ a {
 .register label {
   font-weight: 500;
   padding: 10px 0px;
-}
+} */
 
 .register .form-action {
   display: none;
@@ -722,7 +728,7 @@ a {
 
   .navbar {
     width: calc(100% - 35px);
-    padding:0;
+    padding: 0;
   }
 
   .navbar ul {
@@ -730,14 +736,14 @@ a {
   }
 
   .navbar .me-auto a {
-    padding: 4px 10px
+    padding: 4px 10px;
   }
   .navbar-brand {
-     padding: 0; 
-}
-.notification-item p:nth-of-type(1) {
+    padding: 0;
+  }
+  .notification-item p:nth-of-type(1) {
     font-size: 14px;
-}
+  }
 
   .navbar .navbar-brand img {
     width: 35px;
@@ -749,7 +755,7 @@ a {
   }
   .navbar .navbar-icon span {
     font-size: 10px;
-}
+  }
 
   .navbar .prof_img {
     width: 40px;
@@ -799,8 +805,127 @@ a {
   }
 }
 
-/*////////// pagination ///////////*/
+/*////////// register ///////////*/
 /*////////////////////////////////*/
+.registerOffer .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #14573a;
+  background: transparent;
+  width: 100%;
+}
+
+.registerOffer .input:focus {
+  outline: none;
+}
+
+.registerOffer label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  right: 5px;
+  top: 5px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.registerOffer .input:focus ~ label,
+.registerOffer .input:valid ~ label,
+.registerOffer input:not(:placeholder-shown) ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #14573a;
+}
+
+.registerOffer .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.registerOffer .bar:before,
+.registerOffer .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #14573a;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.registerOffer .bar:before {
+  left: 50%;
+}
+
+.registerOffer .bar:after {
+  right: 50%;
+}
+
+.registerOffer .input:focus ~ .bar:before,
+.registerOffer .input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.registerOffer .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.registerOffer .input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+@keyframes inputHighlighter {
+  from {
+    background: #14573a;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+/*////////// register ///////////*/
+/*////////////////////////////////*/
+
+/*////////// all ///////////*/
+/*////////////////////////////////*/
+.custom-file-upload {
+  display: block;
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: 0.5s;
+}
+.custom-file-upload:hover {
+  color: #dc3545 !important;
+  border: 1px solid #dc3545;
+  background-color: #ecfdf3 !important;
+  font-weight: 600;
+  scale: 1.05;
+}
+.custom-file-upload:hover i {
+  color: #dc3545 !important;
+  font-weight: 600;
+}
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -852,5 +977,9 @@ a {
   color: #777;
   /* اللون الرمادي للنص المعطل */
 }
-/*////////// pagination ///////////*/
+#autoResize {
+  overflow: hidden;
+}
+/*////////// all ///////////*/
 /*////////////////////////////////*/
+
