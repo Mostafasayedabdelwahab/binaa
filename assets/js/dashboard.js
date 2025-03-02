@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function closeMenu() {
-      sidebar.style.minWidth = "50px";
+      sidebar.style.minWidth = "35px";
       menuTexts.forEach((text) => (text.style.display = "none"));
       links.forEach((link) => (link.style.textAlign = "center"));
       eye.classList.add("fa-eye-slash");
