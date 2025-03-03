@@ -177,7 +177,7 @@
                                     method="POST" enctype="multipart/form-data" id="projectForm">
                                     <input type="hidden" name="project_id" value="{{$project->id}}">
                                     <div class="row">
-                                        <div class="col-md-6 position-relative registerOffer">
+                                        <div class="col-md-6 position-relative registerinput">
                                             <input type="number" required name="price_per_meter"
                                                 value="{{ old('price_per_meter') }}" class="input" placeholder="">
                                             <span class="highlight"></span>
@@ -185,7 +185,7 @@
                                             <label for="">سعر المتر</label>
                                             <div style="color: red;"> </div>
                                         </div>
-                                        <div class="col-md-6 position-relative registerOffer mt-4">
+                                        <div class="col-md-6 position-relative registerinput mt-md-0 mt-4">
                                             <input type="number" required name="land_value"
                                                 value="{{ old('land_value') }}" class="input" placeholder="">
                                             <span class="highlight"></span>
@@ -194,7 +194,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="position-relative registerOffer my-4">
+                                    <div class="position-relative registerinput my-4">
                                         <textarea id="autoResize" required name="description" class="input"
                                             placeholder=""></textarea>
                                         <span class="highlight"></span>
@@ -202,8 +202,7 @@
                                         <label for="">وصف العرض </label>
                                     </div>
 
-                                    <div
-                                        class="d-flex align-items-center justify-content-around flex-md-row flex-column">
+                                    <div class="d-flex align-items-center justify-content-around flex-md-row flex-column">
 
                                         <div class="row" id="land-deed-container">
                                             <div class="col-md-12 px-0 ">
