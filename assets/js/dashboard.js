@@ -89,3 +89,10 @@ document.addEventListener("click", function (event) {
     profileDropdown.style.transform = "translateX(-250%)";
   }
 });
+
+// textarea//
+ var  textarea = document.getElementById("autoResize");
+ textarea.addEventListener("input", function () {
+   this.style.height = "auto";
+   this.style.height = this.scrollHeight + "px";
+ });
