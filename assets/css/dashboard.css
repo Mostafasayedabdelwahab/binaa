@@ -1129,7 +1129,8 @@ td {
       width: 100%;
 
       &:before {
-        color: #6c7a89;
+          color: #14573a;
+        font-weight: 600;
         padding-left: 20px;
         content: attr(data-label);
         text-align: right;
