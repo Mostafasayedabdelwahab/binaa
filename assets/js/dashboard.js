@@ -92,7 +92,9 @@ document.addEventListener("click", function (event) {
 
 // textarea//
  var  textarea = document.getElementById("autoResize");
- textarea.addEventListener("input", function () {
-   this.style.height = "auto";
-   this.style.height = this.scrollHeight + "px";
- });
+ if (textarea) {
+   textarea.addEventListener("input", function () {
+     this.style.height = "auto";
+     this.style.height = this.scrollHeight + "px";
+   });
+ }
