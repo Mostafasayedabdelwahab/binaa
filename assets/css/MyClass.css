@@ -1,0 +1,65 @@
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+
+.btnRed {
+    background-color: #d90a2c;
+    border-color: #d90a2c;
+    display: inline-block;
+    color: #fff !important;
+    padding: 10px 21px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration:none;
+}
+
+.btnBlue {
+  background-color: #0062cc;
+  border-color: #0062cc;
+  display: inline-block;
+  color: #fff !important;
+  padding: 10px 21px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration:none;
+  outline: none
+}
+
+
+.btnSmall {
+    margin-top: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 9px 10px;
+}
+
+.button {
+  border-color: #0062cc;
+  display: inline-block;
+  color: #fff !important;
+  padding: 10px 21px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration:none;
+  outline: none
+}
+
+.btnRed:hover {
+  text-decoration: none;
+}
+
+.Yellow {
+  background-color: #fdc100;
+}
+
+
+
+
+
+
+
+
+.FlexBox { display: flex;}
+.colorGreen { color:  #0be881;}
